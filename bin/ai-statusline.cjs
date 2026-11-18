@@ -171,7 +171,9 @@ function getModelQuotas(quotas, rawModel) {
 
   let activeMeter = null;
   if (isArgon) {
-    activeMeter = agy.meters.find(m => /argon/i.test(m.id || m.label));
+    activeMeter = agy.meters.find(m => /argon/i.test(m.id || m.label))
+      || agy.meters.find(m => /gemini models/i.test(m.id || m.label))
+      || agy.meters[0];
   } else if (isClaudeOrGpt) {
     activeMeter = agy.meters.find(m => /claude|gpt|3p/i.test(m.id || m.label));
   } else {
