@@ -1,0 +1,7 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "node C:/Users/SEU_USUARIO/.local/bin/ai-statusline.cjs agy",
+    "enabled": true
+  }
+}
